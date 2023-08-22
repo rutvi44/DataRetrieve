@@ -1,0 +1,28 @@
+ 
+<%- include('layouts/header.ejs') %>
+
+<div class="receipt-container">
+<h1>Receipt</h1>
+<p>Name: <%= name %></p>
+<p>Address: <%= address %></p>
+<p>City: <%= city %></p>
+<p>Province: <%= province %></p>
+<p>Phone: <%= phone %></p>
+<p>Email: <%= email %></p>
+
+<h2>Ordered Products:</h2>
+<p>Maple Syrup (Quantity: <%= product1 %>): $<%= product1 * 18 %></p>
+<p>Honey (Quantity: <%= product2 %>): $<%= product2 * 8 %></p>
+
+<h2>Order Summary:</h2>
+<p>Gross Amount: $<%= grossAmount %></p>
+<p>Tax Amount: $<%= taxAmount %></p>
+<p>Total Cost: $<%= totalCost %></p>
+
+
+  <form action="/orders" method="get">
+    <button type="submit">View All Orders</button>
+  </form>
+
+</div>
+<%- include('layouts/footer.ejs') %>

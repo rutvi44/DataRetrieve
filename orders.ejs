@@ -1,0 +1,42 @@
+
+<%- include('layouts/header.ejs') %>
+
+<div class="orders-container">
+  <h1> All Orders</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Province</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Maple Syrup</th>
+      <th>Honey</th>
+      <th>Gross Amount</th>
+      <th>Tax Amount</th>
+      <th>Total Cost</th>
+    </tr>
+    <% orders.forEach(order => { %>
+      <tr>
+        <td><%= order.name %></td>
+        <td><%= order.address %></td>
+        <td><%= order.city %></td>
+        <td><%= order.province %></td>
+        <td><%= order.phone %></td>
+        <td><%= order.email %></td>
+        <td><%= order.product1 %></td>
+        <td><%= order.product2 %></td>
+        <td><%= order.grossAmount %></td>
+        <td><%= order.taxAmount %></td>
+        <td><%= order.totalCost %></td>
+      </tr>
+    <% }) %>
+  </table>
+</div>
+
+<div class="buttons">
+  <a href="/" class="home-button">Go to Home</a>
+</div>
+
+<%- include('layouts/footer.ejs') %>
